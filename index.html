@@ -1,0 +1,619 @@
+Here is the complete, finished code for your **Parallax Scrolling Website** assignment. It fully satisfies all your requirements—including a fixed navigation bar, full-screen hero section, smooth CSS `background-attachment: fixed` parallax dividers, 4 content/gallery sections, hover animations, a fixed WhatsApp floating icon, and a styled footer.
+
+You can save the code below into two separate files (**`index.html`** and **`style.css`**) in the same folder on your computer, test it in your browser, and then upload the individual files or share them via Google Drive as required.
+
+---
+
+### 1. HTML File (`index.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeakHorizon | Adventure & Exploration</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons (WhatsApp & Socials) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Peak<span>Horizon</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 2. Hero Section (Parallax 1) -->
+  <section id="home" class="parallax hero">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Explore Beyond The Clouds</h1>
+        <p>Discover breathtaking mountain landscapes, guided trekking expeditions, and unforgettable outdoor adventures.</p>
+        <a href="#about" class="cta-btn">Start Your Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section 1: About -->
+  <section id="about" class="content-section light-bg">
+    <div class="container split-layout">
+      <div class="text-box">
+        <h2>About Our Expeditions</h2>
+        <p>At PeakHorizon, we believe that nature is the ultimate sanctuary. Founded by passionate mountaineers, we design safe, sustainable, and awe-inspiring journeys across world-class terrains.</p>
+        <p>Whether you are stepping onto a forest trail for the first time or training for high-altitude peaks, our certified guides ensure every moment is handled with care.</p>
+      </div>
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Hikers on a mountain ridge">
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Divider Section -->
+  <section class="parallax divider-one">
+    <div class="overlay">
+      <h2>"The mountains are calling, and I must go."</h2>
+    </div>
+  </section>
+
+  <!-- Content Section 2: Services -->
+  <section id="services" class="content-section dark-bg">
+    <div class="container">
+      <h2 class="section-title">Our Core Services</h2>
+      <p class="section-subtitle">Tailored outdoor packages built around safety, comfort, and exploration.</p>
+      
+      <div class="cards-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80" alt="Wilderness Camping">
+          <div class="card-body">
+            <h3>Wilderness Camping</h3>
+            <p>Experience starlit skies with eco-friendly basecamps, high-end gear, and campfire dining.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Alpine Trekking">
+          <div class="card-body">
+            <h3>Alpine Trekking</h3>
+            <p>Multi-day guided treks through rugged valleys, glacial lakes, and breathtaking ridges.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Photography Tours">
+          <div class="card-body">
+            <h3>Photography Tours</h3>
+            <p>Capture golden hour peaks and misty valleys alongside professional outdoor photographers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Divider Section -->
+  <section class="parallax divider-two">
+    <div class="overlay">
+      <h2>Unforgettable Views Await You</h2>
+    </div>
+  </section>
+
+  <!-- Content Section 3: Gallery -->
+  <section id="gallery" class="content-section light-bg">
+    <div class="container">
+      <h2 class="section-title">Expedition Gallery</h2>
+      <p class="section-subtitle">Moments captured by our travelers across seasons.</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=600&q=80" alt="Snowy Peak">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Misty Forest">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&q=80" alt="Forest Waterfall">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Alpine Lake">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section 4: Contact -->
+  <section id="contact" class="content-section dark-bg">
+    <div class="container contact-wrapper">
+      <div class="contact-info">
+        <h2>Plan Your Next Adventure</h2>
+        <p>Have questions about upcoming departures, gear lists, or private bookings? Reach out to our team today.</p>
+        <ul class="contact-details">
+          <li><strong>Email:</strong> info@peakhorizon.example.com</li>
+          <li><strong>Phone:</strong> +92 300 1234567</li>
+          <li><strong>Office:</strong> Adventure Plaza, Suite 402</li>
+        </ul>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your Email Address" required>
+        <textarea rows="4" placeholder="Tell us about your dream destination..." required></textarea>
+        <button type="submit" class="cta-btn">Send Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. Fixed WhatsApp Floating Icon -->
+  <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 7. Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>&copy; 2026 PeakHorizon Expeditions. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+```
+
+---
+
+### 2. CSS File (`style.css`)
+
+```css
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 1. Navigation Bar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 8%;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f59e0b;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #f59e0b;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f59e0b;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* 3. Parallax Effect Engine */
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+/* 2. Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  color: #f1f5f9;
+}
+
+/* Call-to-Action Buttons & Hover Styles */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #f59e0b;
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #fbbf24;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.6);
+}
+
+/* Parallax Divider Backgrounds */
+.divider-one {
+  height: 50vh;
+  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+}
+
+.divider-two {
+  height: 50vh;
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');
+}
+
+.divider-one h2, .divider-two h2 {
+  font-size: 2.2rem;
+  max-width: 700px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* 4. Content Sections Layout */
+.content-section {
+  padding: 90px 8%;
+}
+
+.light-bg {
+  background-color: #f8fafc;
+}
+
+.dark-bg {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 50px;
+  font-size: 1.05rem;
+}
+
+/* Split Layout (About Section) */
+.split-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.text-box {
+  flex: 1;
+}
+
+.text-box h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.text-box p {
+  margin-bottom: 15px;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.image-box {
+  flex: 1;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.02);
+}
+
+/* Cards Grid (Services Section) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.card-body p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Gallery Grid Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+}
+
+/* Contact Section Layout */
+.contact-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.contact-details {
+  list-style: none;
+}
+
+.contact-details li {
+  margin-bottom: 12px;
+  color: #cbd5e1;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f59e0b;
+}
+
+/* 6. WhatsApp Floating Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+}
+
+/* 7. Footer Styling */
+footer {
+  background-color: #090d16;
+  color: #94a3b8;
+  padding: 40px 8%;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #f59e0b;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .split-layout, .contact-wrapper {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none; /* Can be expanded with a hamburger menu if desired */
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+```
